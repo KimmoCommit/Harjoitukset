@@ -2,7 +2,7 @@
 <html lang="fi">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Koski PHP harjoitussivu</title>
 
@@ -20,8 +20,9 @@
       <![endif]-->
     </head>
     <body>
-     <nav class="navbar navbar-default" role="navigation">
-      <div class="container">
+    
+      
+         <nav class="navbar navbar-default" role="navigation">
         <ul class="nav navbar-nav">
           <li class="active"><a href="index.php">Etusivu</a></li>
         </ul>
@@ -29,8 +30,9 @@
           <li><a href="register.php">Rekisteröidy</a></li>
         </ul>
       </nav>
-      <div class="container">
+    
         <div class="content-container">
+          <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="jumbotron">
@@ -42,6 +44,7 @@
         </div>
       </div>
     </div>
+
 
 
 
