@@ -15,7 +15,7 @@ if (isset($_POST["rekisteroidy"])) {
   if($nameError == 0 && $puhnroError == 0 && $lahiosoiteError == 0 && $ikaError == 0 && $spostiError == 0 && $salasanaError == 0 && $salasanaVahvistusError == 0){
    $_SESSION["registration"] = $registration;
    session_write_close();
-   header("location: listall.php");
+   header("location: listdata.php");
    exit;
  }
 

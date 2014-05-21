@@ -40,6 +40,7 @@ public static function getError($errorcodes) {
 
 
 //Asetetaan luokalle attribuutit
+private $id;
 private $nimi;
 private $puhnro;
 private $lahiosoite;
@@ -50,8 +51,9 @@ private $salasanaVahvistus;
 
 
 //Konstruktori
-function __construct($nimi = "", $puhnro = "", $lahiosoite = "" , $ika = "", $sposti = "", $salasana = "", $salasanaVahvistus = "") {
+function __construct( $nimi = "", $puhnro = "", $lahiosoite = "" , $ika = "", $sposti = "", $salasana = "", $salasanaVahvistus = "", $id = 0) {
 	//ucwords asettaa jokaisen sanan ensimm'isen kirjaimen isoksi - tässä String-muuttujalle $nimi
+
 	$this->nimi = trim(ucwords($nimi));
 	$this->puhnro = trim($puhnro);
 	$this->lahiosoite = trim(ucwords($lahiosoite));
@@ -59,7 +61,11 @@ function __construct($nimi = "", $puhnro = "", $lahiosoite = "" , $ika = "", $sp
 	$this->sposti = trim($sposti);
 	$this->salasana = trim($salasana);
 	$this->salasanaVahvistus = trim($salasanaVahvistus);
+	$this->id = $id;
 }
+
+
+
 
 
 //Set-metodi
@@ -320,6 +326,15 @@ public function checkSalasanaVahvistus($required = true, $min = 8, $max = 30) {
 
 return 0;
 
+}
+
+public function setId($id) {
+	$this->id = trim($id);
+}
+
+
+public function getId() {
+	return $this->id;
 }
 
 }

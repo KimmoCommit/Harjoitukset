@@ -10,7 +10,7 @@ h4 {
 	font-weight: bolder;
 }
 
-.bold {
-
-
+.panel-heading {
+	font-weight:bold;
+	font-size:120%;
 }
