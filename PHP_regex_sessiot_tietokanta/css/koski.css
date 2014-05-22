@@ -1,0 +1,16 @@
+h4 {
+	color:rgba(255,100,100,0.8);
+}
+
+.listall-table td{
+	padding:5px;
+}
+
+.listall-table td:first-child{
+	font-weight: bolder;
+}
+
+.panel-heading {
+	font-weight:bold;
+	font-size:120%;
+}
