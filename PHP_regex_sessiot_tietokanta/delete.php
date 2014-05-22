@@ -49,9 +49,12 @@ try
    foreach($result as $registration) {
 	
 	print("<form method='post' action='delete.php'><div class='panel panel-default'>");
-	print("<div class='panel-heading'> ". $registration->getNimi() ."</div>");
+	print("<div class='panel-heading'>". $registration->getNimi() ."</div>");
 	print("<div class='panel-body'>
 	<table class='listall-table'>
+	<tr>
+		<td>Id:</td><td>". $registration->getId() ."</td>
+	</tr>
 	<tr>
 		<td>Puhelinnumero:</td><td>". $registration->getPuhnro() ."</td>
 	</tr>
