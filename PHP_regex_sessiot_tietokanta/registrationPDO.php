@@ -98,5 +98,35 @@ class registrationPDO {
 		return $result;
 		
 	}
+	
+	function deletePerson($id) {
+		$sql = "DELETE FROM person WHERE id = :id";
+		if (! $stmt = $this->db->prepare($sql)) {
+			$error = $this->db->errorInfo();
+	
+			throw new PDOException ($error[2], $error[1]);
+		}
+		$stmt->bindValue(":id", $id, PDO::PARAM_STR);
+	
+	
+		if(! $stmt->execute()) {
+			$error = $stmt->errorInfo();
+				
+			if($error[0] == "HY093"){
+				$error[2] = "Invalid parameter";
+			}
+				
+			throw new PDOException($error[2], $error[1]);
+		}
+	
+		return;
+	
+	}
+	
+	
+	
+	
+	
+	
 }
 ?>

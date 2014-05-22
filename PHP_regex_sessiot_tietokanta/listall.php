@@ -61,8 +61,7 @@ try
 } catch (Exception $error) {
     print($error->getMessage());
 
-	//header("location: virhe.php?sivu=Listaus&virhe=" . $error->getMessage());
-	//exit;
+
 }
 ?>
             </div>
